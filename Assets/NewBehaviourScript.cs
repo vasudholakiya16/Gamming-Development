@@ -26,14 +26,12 @@ public class NewBehaviourScript : MonoBehaviour
             Debug.Log("Up Arrow key was pressed.");
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+       else if(Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("Down Arrow key was pressed.");
         }
-
         // player presses Enter key
-
-        if(Input.GetKeyDown(KeyCode.Return))
+        else if(Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Enter key was pressed.");
         }
