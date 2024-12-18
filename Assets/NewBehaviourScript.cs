@@ -2,16 +2,27 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    int max = 1000;
-        int min = 1;
+    int max;
+        int min;
 
-        int guess = 500;
+        int guess;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        StartGame();
         
 
-         Debug.Log("Welcome to Number Wizard!");
+      
+        
+    }
+
+    void StartGame(){
+
+        max = 1000;
+        min = 1;
+        guess = 500;
+
+           Debug.Log("Welcome to Number Wizard!");
         // print("Welcome to Number Wizard.....!");
         Debug.Log("Pick a number in your head, but don't tell me!");
         Debug.Log("The highest number you can pick is: " + max);
@@ -22,7 +33,7 @@ public class NewBehaviourScript : MonoBehaviour
         Debug.Log("Is your number higher or lower than " + guess);  
 
         max = max + 1;
-        
+
     }
 
     // Update is called once per frame
@@ -32,8 +43,9 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Debug.Log("Up Arrow key was pressed.");
             min = guess;
-            guess = (max + min) / 2;
-            Debug.Log("Is it higher or lower than..." + guess);
+            NextGuess();
+            // guess = (max + min) / 2;
+            // Debug.Log("Is it higher or lower than..." + guess);
 
         }
 
@@ -41,15 +53,24 @@ public class NewBehaviourScript : MonoBehaviour
         {
             Debug.Log("Down Arrow key was pressed.");
             max = guess;    
-            guess = (max + min) / 2;
-            Debug.Log("Is it higher or lower than..." + guess);
+            NextGuess();
+            // guess = (max + min) / 2;
+            // Debug.Log("Is it higher or lower than..." + guess);
         }
         // player presses Enter key
         else if(Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Enter key was pressed.");
+            // Debug.Log("Enter key was pressed.");
+            Debug.Log("I am a genius!");
+            StartGame(); 
         }
         
         
+    }
+
+    void NextGuess()
+    {
+        guess = (max + min) / 2;
+        Debug.Log("Higher or lower than..." + guess);
     }
 }
