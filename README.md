@@ -1,5 +1,5 @@
 
-﻿# Complete Unity Developer 2D - Number Wizard Console
+﻿1 Complete Unity Developer 2D - Number Wizard Console
 
 This is the [Complete Unity Developer](http://gdev.tv/cudgithub) - one of the most successful e-learning courses on the internet! Completely re-worked from scratch with brand-new projects and our latest teaching techniques. You will benefit from the fact we have already taught nearly half a million students game development, many shipping commercial games as a result.
 
